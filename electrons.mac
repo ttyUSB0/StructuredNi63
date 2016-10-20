@@ -1,0 +1,32 @@
+# Используем GPS
+#
+/gps/particle e-
+#/gps/particle geantino
+/gps/direction 0 0 1
+#
+# Source position and structure - Plane
+# Плоскость halfx X halfy мкм
+/gps/pos/type Volume
+/gps/pos/shape Para
+/gps/pos/halfx 40 um
+/gps/pos/halfy 40 um
+/gps/pos/halfz 0.35 um
+/gps/pos/centre 0 0 -10.07 um
+
+# Source direction and angular distribution
+/gps/ang/type iso
+/gps/ang/mintheta 90.0 deg
+/gps/ang/maxtheta 180 deg
+#/gps/ang/type planar
+#
+# Energy spectrа
+#/gps/ene/mono 100.3 keV
+/gps/ene/type Exp
+/gps/ene/min 100 eV
+/gps/ene/max 63 keV
+/gps/ene/ezero 0.02
+# ezero в MeV, с отрицательным знаком, да еще и обратная (1/х)
+#
+# RUN
+/run/initialize
+#/run/beamOn 200
